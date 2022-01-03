@@ -37,9 +37,9 @@ The simulated device should connect to the server via mqtt.
 The messages sent as telemetry shall be seen in the wireshark-log-files available in the "../wireshark-logs" folder.
 
 ## Observations
-1. The TLS messages have a frame size of 177 bytes for a simple telemetry message of
+1. The TLS messages have a frame size of 177 bytes for a simple telemetry example of
 {"ts":1641204464295,"values":{"volt":249,"current":10}}
-2. The non-TLS message have a frame size of 148 bytes for a simple telemetry message of
+2. The non-TLS message have a frame size of 148 bytes for a simple telemetry example of
 {"ts":1641204443676,"values":{"volt":242,"current":14}}
 3. It can be seen that the telemetry messages from the TLS node are encrypted and send to port 8883
 4. Also it can be seen that the telemetry messages from the non-TLS node are not encrypted and the data
