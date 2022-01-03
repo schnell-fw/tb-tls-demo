@@ -1,5 +1,5 @@
 # Thingsboard TLS Demo
-This is an example demo of both tls and non-tls nodes communicating to tb-server (v3.3.2) simultaneously.
+This is an example demo of both tls and non-tls nodes (simualted nodes in node-red) communicating to tb-server (v3.3.2) simultaneously.
 
 ## Server Side Settings
 A community-edition of tbv3.3.2 is installed in a local machine (IP: 192.168.1.110). Port 8099 is configured for unsecured mqtt. Port 8883 is configured for secured mqtt over tls.
