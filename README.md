@@ -3,7 +3,7 @@ This is an example demo of both tls and non-tls nodes (simualted nodes in node-r
 
 ## Server Side Settings
 A community-edition of tbv3.3.2 is installed in a local machine (IP: 192.168.1.110). Port 8099 is configured for unsecured mqtt. Port 8883 is configured for secured mqtt over tls.
-Server side self-signed certificate and key pair was generated using openssl. Server public key server.pem and server private key key.pem is pointed correctly in the thingsboard.conf file.
+Server side self-signed certificate and key pair is generated using openssl. Server public key server.pem and server private key key.pem is pointed correctly in the thingsboard.conf file.
 
 Refer https://thingsboard.io/docs/pe/user-guide/mqtt-over-ssl/ for details about generating server side keys using openssl and configuring the tb-server for SSL
 
