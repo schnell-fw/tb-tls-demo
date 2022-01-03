@@ -1,16 +1,14 @@
-# Thingsboard-TLS-Demo
-TLS and no-TLS nodes working simultaneously with a local tb-server instance v3.3.2
-
+# Thingsboard TLS Demo
 This is an example demo of both tls and non-tls nodes communicating to tb-server (v3.3.2) simultaneously.
 
-##Server Side Settings
+## Server Side Settings
 A community-edition of tbv3.3.2 is installed in a local machine (192.168.1.110)
 Port 8099 is configured for unsecured mqtt
 Port 8883 is configured for secured mqtt over tls
 Server side self-signed certificate and key pair was generated using openssl
 Server public key server.pem and server private key key.pem is pointed correctly in the thingsboard.conf file
 
-##Client Side Settings (TLS node)
+## Client Side Settings (TLS node)
 Client side certificate and key pair is generated using openssl
 Create a device (named as dev-02-tls) in the above said local tb-server instance. Application port for tb-server is 8080
 Select the device-credential-type as x.509 certificate.
@@ -26,7 +24,7 @@ Start node-red.
 The simulated device should connect to the server via mqtt over tls.
 The handshake and the tls communication can be observed in the wireshark-log-files available in the "../wireshark-logs" folder.
 
-##Client Side Settings (non-TLS node)
+## Client Side Settings (non-TLS node)
 Another device (named as dev-01-tls) is created in the above said local tb-server instance.
 For this device, accessToken is selected as device-credential-type
 A random accessToken is generated for the device
@@ -38,7 +36,7 @@ Start node-red.
 The simulated device should connect to the server via mqtt.
 The messages sent as telemetry shall be seen in the wireshark-log-files available in the "../wireshark-logs" folder.
 
-#Observations
+## Observations
 1. The TLS messages have a frame size of 177 bytes for a simple telemetry message of
 {"ts":1641204464295,"values":{"volt":249,"current":10}}
 2. The non-TLS message have a frame size of 148 bytes for a simple telemetry message of
