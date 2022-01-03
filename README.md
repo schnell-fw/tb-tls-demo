@@ -3,7 +3,9 @@ This is an example demo of both tls and non-tls nodes communicating to tb-server
 
 ## Server Side Settings
 A community-edition of tbv3.3.2 is installed in a local machine (IP: 192.168.1.110). Port 8099 is configured for unsecured mqtt. Port 8883 is configured for secured mqtt over tls.
-Server side self-signed certificate and key pair was generated using openssl. Server public key server.pem and server private key key.pem is pointed correctly in the thingsboard.conf file
+Server side self-signed certificate and key pair was generated using openssl. Server public key server.pem and server private key key.pem is pointed correctly in the thingsboard.conf file.
+
+Refer https://thingsboard.io/docs/pe/user-guide/mqtt-over-ssl/ for details about generating server side keys using openssl and configuring the tb-server for SSL
 
 ## Client Side Settings (TLS node)
 Client side certificate and key pair is generated using openssl
@@ -19,6 +21,8 @@ Uncheck the option "verify server certificate" since this server-public-key is s
 Start node-red.
 The simulated device should connect to the server via mqtt over tls.
 The handshake and the tls communication can be observed in the wireshark-log-files available in the "../wireshark-logs" folder.
+
+Refer https://thingsboard.io/docs/pe/user-guide/certificates/ for generating client/device side certificate using openssl and configuring it in tb-server.
 
 ## Client Side Settings (non-TLS node)
 Another device (named as dev-01-tls) is created in the above said local tb-server instance.
