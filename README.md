@@ -39,10 +39,10 @@ The messages sent as telemetry shall be seen in the wireshark-log-files availabl
 ## Observations
 1. The TLS messages have a frame size of 177 bytes for a simple telemetry example of
 {"ts":1641204464295,"values":{"volt":249,"current":10}}
-<img src="https://github.com/schnell-rnd/tb-tls-demo/blob/ea9a53e1f4fa3fd7524697595f0cc71c29ac5d71/screenshots/screenshot-tls-communication.png" alt="screenshot-TLS" width="256">
+<img src="https://github.com/schnell-rnd/tb-tls-demo/blob/ea9a53e1f4fa3fd7524697595f0cc71c29ac5d71/screenshots/screenshot-tls-communication.png" alt="screenshot-TLS" width="1024">
 2. The non-TLS message have a frame size of 148 bytes for a simple telemetry example of
 {"ts":1641204443676,"values":{"volt":242,"current":14}}
-<img src="https://github.com/schnell-rnd/tb-tls-demo/blob/ea9a53e1f4fa3fd7524697595f0cc71c29ac5d71/screenshots/screenshot-noTLS-communication.png" alt="screenshot-noTLS" width="256">
+<img src="https://github.com/schnell-rnd/tb-tls-demo/blob/ea9a53e1f4fa3fd7524697595f0cc71c29ac5d71/screenshots/screenshot-noTLS-communication.png" alt="screenshot-noTLS" width="1024">
 3. It can be seen that the telemetry messages from the TLS node are encrypted and send to port 8883
 4. Also it can be seen that the telemetry messages from the non-TLS node are not encrypted and the data
 is visible in the log file as clear text. The data is send to the sever port 8099
