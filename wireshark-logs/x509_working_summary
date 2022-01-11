@@ -1,0 +1,18 @@
+PYTHON API
+
+mqtt_client.tls_set(ca_certs="server.pem",certfile="cert.pem",keyfile="key.pem",cert_reqs=ssl.CERT_NONE,tls_version=ssl.PROTOCOL_TLSv1_2, ciphers=None)
+
+mqtt_client.tls_insecure_set(True)            //True  : don't check server certificate
+					       //False : check server certificate self signed certificate not working with python
+
+
+
+* so python client is working without verifing server certificate .
+
+* 8883 port is not enabled in vodafone and airtel simcards ( M2M ) .
+	(client reset by peer Error will raise)
+
+* checked with BSNL simcard it is working (open network).
+
+
+
