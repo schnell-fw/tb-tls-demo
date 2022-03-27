@@ -8,14 +8,14 @@ Server side self-signed certificate and key pair is generated using openssl. Ser
 Refer https://thingsboard.io/docs/pe/user-guide/mqtt-over-ssl/ for details about generating server side keys using openssl and configuring the tb-server for SSL
 
 ## Client Side Settings (TLS node)
-Client side certificate and key pair is generated using openssl
-Create a device (named as dev-02-tls) in the above said local tb-server instance. Application port for tb-server is 8080
+Client side certificate and key pair is generated using openssl.
+Create a device (named as dev-02-tls) in the above said local tb-server instance. Application port for tb-server is 8080.
 Select the device-credential-type as x.509 certificate.
 Copy the contents of the client side public key in cert.pem file and paste it as device credential in tb-server.
 
 Now open node-red and simulate a node with secured mqtt connection.
 No need to provide mqtt username and password.
-In the TLS Configuration, provide the path to client-public-key (cert.pem), client-private-key (key.pem) and server-public-key (server.pem). These keys are available in the "../keys" folder in this project
+In the TLS Configuration, provide the path to client-public-key (cert.pem), client-private-key (key.pem) and server-public-key (server.pem). These keys are available in the "../keys" folder in this project.
 Uncheck the option "verify server certificate" since this server-public-key is self-signed
 
 Start node-red.
@@ -26,8 +26,8 @@ Refer https://thingsboard.io/docs/pe/user-guide/certificates/ for generating cli
 
 ## Client Side Settings (non-TLS node)
 Another device (named as dev-01-tls) is created in the above said local tb-server instance.
-For this device, accessToken is selected as device-credential-type
-A random accessToken is generated for the device
+For this device, accessToken is selected as device-credential-type.
+A random accessToken is generated for the device.
 
 Now open node-red and simulate a node with normal mqtt connection.
 Provide mqtt username as accessToken of the device created in te-server. Password is left blank.
