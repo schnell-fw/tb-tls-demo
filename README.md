@@ -52,3 +52,6 @@ Screenshots with the above details are availble in the "../screenshots" folder.
   a signed certificate is available, then this option can be checked.
 7. While copying the contents of the cert.pem file to the device-credential, leave out the BEGIN-CERTIFICATE and END-CERTIFICATE lines.
   Copy only the contents in between these lines
+
+
+#############################################Thank You################################################################################
